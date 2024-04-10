@@ -1,0 +1,45 @@
+header, main {
+    max-width: 60rem;
+    margin: auto;
+}
+
+header {
+    grid-template-columns: 101px auto;
+} // end  header
+
+
+/* NAVIGATION STUFF GOES HERE  */
+nav {
+    justify-self: end;
+    button {display: none;}
+    ul, ul.open {
+        position: relative;
+        display: flex;
+        background-color: transparent ;
+        width: auto;
+    }
+    ul {top: 0;}
+    ul li {border: none;}
+    ul li a {
+        font-weight: $boldWeight;
+        color: #333;
+        border-radius: 20px;
+        padding: .5rem 1rem;
+        margin-left: .2rem;
+        transition: all .5s ease;
+    }
+    ul li a:hover { //has a specificity of 3
+        background-color: lighten($primaryColor, 30%);
+        color: black!important; // adding !important will override everything
+    }
+    ul li.active a { //has a specificity of 4, so no matter the order, 4 will override bc more specific BUT
+        color: white;
+    }
+} //end of nav
+
+
+// create the for loop
+@for $i from 1 through 12 {
+    $w: calc($i /12) *100%; // /12 bc there are 112 colums in foundation framework
+    .large-#{$i} {flex-basis: $w;}
+}

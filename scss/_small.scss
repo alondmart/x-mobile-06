@@ -1,0 +1,153 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+main h1, main h2, main div.row, footer, header {padding: 0 $gutter;}
+
+body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+}
+
+// HEADER STUFF
+#headerWrapper {
+    background-color: $secondaryColor;
+    color: $primaryColor;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 101px auto;
+    align-items: center;
+    padding: 1rem $gutter;
+    gap: 8px;
+    h1 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: $normalWeight;
+    }
+}
+
+// NAV STUFF
+nav {
+    button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        color: #333;
+        padding: 2rem 2vw .5rem 1rem;
+    } //end button
+
+    ul {
+        padding: 0;
+        background-color: $primaryColor;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        width: 100%; // this is what makes the nav fill the screen from left to right
+        display: none;
+        li {border-bottom: 1px solid rgba(0,0,0,0.3);} 
+        li a {
+            display: block;
+            padding: .9rem 2vw;
+            font-weight: $boldWeight;
+            text-decoration: none;
+            color: #fff;
+            text-align: right; 
+            &:hover {background-color: darken($primaryColor, 4%);}
+        } // end li anchors
+    } //end ul
+    ul li.active a {background-color: darken($primaryColor, 8%);} 
+    ul.open {display: block;} 
+
+    ul li, ul li a, ul li.active a {list-style-type: none;}
+
+} //end nav
+
+// MAIN STUFF
+
+main img {
+    width: 100%;
+    height: auto;
+}
+
+main button {
+    border: 2px solid $primaryColor;
+    background-color: transparent;
+    padding: 1rem;
+    font-weight: $boldWeight;
+    border-radius: 40px;
+    color: $primaryColor;
+    &:hover {
+        background-color: $primaryColor;
+        color: white;
+    }
+}
+
+main h3 {margin-bottom: 0;}
+
+// styling the  rows
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0; //this is the space between different rows
+    padding: 0 8px;
+    // border: solid green 1px;
+}
+
+// styling the columns
+.column {
+    padding: 0 8px;
+    margin: 1rem 0; // in terms of .fill, this is the space on bottom/top of content and the edge of the fill
+    // border: dashed red 1px;
+}
+
+// create the for loop
+@for $i from 1 through 12 {
+    $w: calc($i /12) *100%; // /12 bc there are 112 colums in foundation framework
+    .small-#{$i} {flex-basis: $w;}
+}
+
+.line, .round, .shadow {padding: 8px 8px;}
+.line {border: 1px solid #bbb}
+.round{border-radius: 9px;}
+.fill{background-color: #eee; }
+.shadow{box-shadow: 0 0 10px #aaa;}
+
+ion-icon {
+    color: $primaryColor;
+    font-size: 8rem;
+  }
+
+
+// FOOTER STUFF
+#footerWrapper {
+    background-color: $primaryColor;
+}
+
+footer {
+    padding: 0.5rem $gutter;
+    p {
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+        color: white;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PIX Mobile</title>
+    <meta name="description" content="Alondra's sample start file">
+    <meta name="author" content="Alondra Martinez">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+   
+    <link href="css/styles.min.css" rel="stylesheet">
+
+    <!-- fav icon stuff -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+ 
+
+    
+    
+</head>
+<body>
+    <div id="headerWrapper">
+        <header>
+            <a class="logo" href="index.html"><img src="images/logo1x.png" alt="Pix Mobile logo" width="101" height="50" srcset="images/logo1x.png 1x, images/logo2x.png 2x, images/logo3x.png 3x"></a>
+            <!-- <h1>PIX Mobile</h1> -->
+            <nav>
+                <button id="hamburgerBtn">&#9776;</button>
+                <ul id="primaryNav">
+                    <li><a href="#">Shop</a>
+                    <li class="active"><a href="#">Services</a></li>
+                    <li><a href="#">Tech support</a></li>
+                    <li><a href="#">Our stores</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    
+
+
+    <div id="mainWrapper">
+        <main>
+            <h1>Services</h1> <!-- this has to match the active nav page-->
+            <!-- ROW 1 SERVICE DETAILS -->
+            <div class="row">
+                <div class="column small-12 medium-12 large-5"> <!-- small-12=full width, medium-6=50% width, large-3=25%-->
+                    <img src="images/store.webp" alt="cheeseburger" width="1200" height="800">
+                </div><!-- end column -->   
+                <div class="column small-12 medium-12 large-7">
+                    <p>Thank you for your interest in PIX Mobile services! Walk-in customers are accepted. Please note that during peak hours, there may be a short wait. To minimize any wait times, we highly recommend scheduling appointments in advance online or by phone. <br> By requesting our services, customers agree to comply with our store policies, including respecting staff and fellow customers, adhering to appointment schedules, and understanding warranty terms.
+                        </p>
+                </div><!-- end column -->    
+            </div> <!-- end row -->
+
+            <!-- ROW 2 SCHEDULE SERVICE -->
+            <div class="row fill">
+                <div class="column small-4 medium-3 large-2">
+                    <img class="schedule" src="images/calendar-outline.svg" alt="calendar" width="300" height="175">
+                    <!-- <ion-icon name="calendar-outline"></ion-icon> -->
+                </div> <!-- end column-->
+                <div class="column small-12 medium-9 large-10">
+                    <p>Scheduling an appointment for a service is the best way to guarantee short wait times. Please make sure to double-check the location you are scheduling at!</p>
+                    <button>Schedule a service</button>
+                </div> <!-- end column-->
+            </div> <!-- end row-->
+
+            <!-- ROW 3 SERVICES PROVIDED -->
+            <div class="row">
+                <h2 class="small-12">Services we provide</h2>
+                <div class="column small-12 medium-4 large-4 ">
+                    <section>
+                        <img src="images/custom.webp" alt="custom phone case" width="300" height="300">
+                        <h3>Custom phone cases</h2>
+                        <p>Personalize your phone case with unique designs, ensuring both style and protection tailored to your preferences.</p>
+                </section>
+                </div> <!--end column-->
+                <div class="column small-12 medium-4 large-4 ">
+                    <section >
+                        <img src="images/screen.webp" alt="Screen replacement" width="300" height="300">
+                        <h3>Screen replacement</h2>
+                        <p>A professional replacement service, ensuring precise restoration of device functionality and visual clarity.</p>
+                    </section>
+                </div> <!--end column-->
+                <div class="column small-12 medium-4 large-4">
+                    <section>
+                        <img src="images/clean.webp" alt="deep clean of device" width="300" height="300">
+                        <h3>Device cleaning</h2>
+                        <p>A thorough cleaning service for devices, removing dirt, grime, and bacteria to restore them to a pristine condition and enhance their longevity.</p>
+                    </section>
+                </div> <!--end column-->
+            </div> <!--end row-->
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+    </div>
+
+    <div>
+        <footer id="footerWrapper">
+            <p> &copy; <span id="year">x</span> Alondra Martinez   </p>
+        </footer>
+    </div>
+
+    <script src="js/scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

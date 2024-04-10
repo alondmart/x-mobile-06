@@ -1,0 +1,17 @@
+header {
+ padding: 1rem $gutter;
+ h1 {
+    font-size: 2rem;
+    font-weight: $boldWeight;
+    }   
+}
+
+nav ul {
+    width: 200px;
+}
+
+// create the for loop
+@for $i from 1 through 12 {
+    $w: calc($i /12) *100%; // /12 bc there are 112 colums in foundation framework
+    .medium-#{$i} {flex-basis: $w;}
+}
